@@ -1,0 +1,7 @@
+[L-P1] Hi
+[R-P2] Hello
+[L-P1] Welp
+[L-P1-HAPPY] Ima go
+[L-P1-ANGRY] Bye
+[L-P3] Hello P2
+<<END>>

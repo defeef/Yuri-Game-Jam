@@ -1,0 +1,84 @@
+[gd_scene load_steps=6 format=3 uid="uid://cekn2inj7mgrt"]
+
+[ext_resource type="Script" path="res://vn_ui.gd" id="1_bf6w3"]
+[ext_resource type="Texture2D" uid="uid://bsaqefbsq5cap" path="res://icon.svg" id="2_1gfvi"]
+[ext_resource type="FontFile" uid="uid://c1mwr5lryspdk" path="res://fonts/VCR_OSD_MONO_1.001.ttf" id="3_bbsag"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i64b4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54lxx"]
+
+[node name="VN_UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_bf6w3")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = SubResource("AtlasTexture_i64b4")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 10
+texture = SubResource("AtlasTexture_54lxx")
+expand_mode = 5
+stretch_mode = 5
+
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+clip_contents = true
+layout_mode = 2
+texture = ExtResource("2_1gfvi")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/TextureRect"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 15.0
+theme_override_fonts/normal_font = ExtResource("3_bbsag")
+bbcode_enabled = true
+text = "[center]asdfasftest12345678900987654321qwertyulkhgfdertyhjnb[/center]"
+fit_content = true
+shortcut_keys_enabled = false
