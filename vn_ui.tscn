@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cekn2inj7mgrt"]
+[gd_scene load_steps=7 format=3 uid="uid://cekn2inj7mgrt"]
 
 [ext_resource type="Script" path="res://vn_ui.gd" id="1_bf6w3"]
 [ext_resource type="Texture2D" uid="uid://bsaqefbsq5cap" path="res://icon.svg" id="2_1gfvi"]
 [ext_resource type="FontFile" uid="uid://c1mwr5lryspdk" path="res://fonts/VCR_OSD_MONO_1.001.ttf" id="3_bbsag"]
+[ext_resource type="Script" path="res://VNChoiceMenu.gd" id="4_qaq3m"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_i64b4"]
 
@@ -31,16 +32,16 @@ size_flags_vertical = 3
 layout_mode = 2
 alignment = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+[node name="Scene" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Scene"]
 layout_mode = 2
 size_flags_horizontal = 3
 alignment = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Scene/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -49,17 +50,17 @@ texture = SubResource("AtlasTexture_i64b4")
 expand_mode = 5
 stretch_mode = 5
 
-[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="VSeparator" type="VSeparator" parent="MarginContainer/VBoxContainer/Scene"]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer/VBoxContainer/Scene"]
 layout_mode = 2
 size_flags_horizontal = 3
 alignment = 2
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2"]
+[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer/Scene/VBoxContainer2"]
 texture_filter = 1
 layout_mode = 2
 size_flags_horizontal = 3
@@ -68,12 +69,12 @@ texture = SubResource("AtlasTexture_54lxx")
 expand_mode = 5
 stretch_mode = 5
 
-[node name="TextureRect" type="TextureRect" parent="MarginContainer/VBoxContainer"]
+[node name="HudBar" type="TextureRect" parent="MarginContainer/VBoxContainer"]
 clip_contents = true
 layout_mode = 2
 texture = ExtResource("2_1gfvi")
 
-[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/TextureRect"]
+[node name="RichTextLabel" type="RichTextLabel" parent="MarginContainer/VBoxContainer/HudBar"]
 layout_mode = 0
 offset_right = 1152.0
 offset_bottom = 15.0
@@ -82,3 +83,14 @@ bbcode_enabled = true
 text = "[center]asdfasftest12345678900987654321qwertyulkhgfdertyhjnb[/center]"
 fit_content = true
 shortcut_keys_enabled = false
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+script = ExtResource("4_qaq3m")
+
+[node name="TextureButton" type="TextureButton" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+texture_normal = ExtResource("2_1gfvi")
+stretch_mode = 4

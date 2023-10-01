@@ -1,9 +1,11 @@
+TextureButton
+Button
+MarginContainer
+VBoxContainer
 TextureRect
 AnimatedSprite2D
-MarginContainer
 Control
 Sprite2D
-VBoxContainer
 VSeparator
 HBoxContainer
 RichTextLabel

@@ -1,1 +1,4 @@
 res://vn_ui.tscn
+res://VNChoiceMenu.gd
+res://main.tscn
+res://vn_ui.gd

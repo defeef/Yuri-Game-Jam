@@ -4,9 +4,9 @@ var file
 var lines = []
 @onready var current_line = 0
 
-@onready var label = $"MarginContainer/VBoxContainer/TextureRect/RichTextLabel"
-@onready var img1 = $"MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer/TextureRect"
-@onready var img2 = $"MarginContainer/VBoxContainer/HBoxContainer/VBoxContainer2/TextureRect"
+@onready var label = $"MarginContainer/VBoxContainer/HudBar/RichTextLabel"
+@onready var img1 = $"MarginContainer/VBoxContainer/Scene/VBoxContainer/TextureRect"
+@onready var img2 = $"MarginContainer/VBoxContainer/Scene/VBoxContainer2/TextureRect"
 const sprite_size = Vector2(128, 128)
 
 func _ready():

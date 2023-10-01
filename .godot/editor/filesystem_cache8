@@ -1,7 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1696099589
+::res://::1696126173
 icon.svg::CompressedTexture2D::3650798749239522567::1695523404::1695613029::1::::<><>::
 main.tscn::PackedScene::2878593642596221561::1696089204::0::1::::<><>::uid://cekn2inj7mgrt
+README.md::TextFile::-1::1696099737::0::1::::<><>::
 test_script.txt::TextFile::-1::1695861040::0::1::::<><>::
 vn_ui.gd::GDScript::-1::1695868317::0::1::::<>Control<>::
 vn_ui.tscn::PackedScene::5075078497541744941::1696089349::0::1::::<><>::res://vn_ui.gd<>uid://bsaqefbsq5cap::::res://icon.svg<>uid://c1mwr5lryspdk::::res://fonts/VCR_OSD_MONO_1.001.ttf
